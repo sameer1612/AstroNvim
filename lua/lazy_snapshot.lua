@@ -51,4 +51,5 @@ return {
   { "williamboman/mason.nvim", version = "^1", optional = true },
   { "windwp/nvim-autopairs", commit = "35493556b895f54c129918aca43ae9a63af42a1f", optional = true },
   { "windwp/nvim-ts-autotag", commit = "6be1192965df35f94b8ea6d323354f7dc7a557e4", optional = true },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 }
 }
