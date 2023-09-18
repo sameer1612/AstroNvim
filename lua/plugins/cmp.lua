@@ -50,7 +50,11 @@ return {
         preselect = cmp.PreselectMode.None,
         formatting = {
           fields = { "kind", "abbr", "menu" },
-          format = lspkind_status_ok and lspkind.cmp_format(utils.plugin_opts "lspkind.nvim") or nil,
+          -- format = lspkind_status_ok and lspkind.cmp_format(utils.plugin_opts "lspkind.nvim") or nil,
+          format = lspkind_status_ok and lspkind.cmp_format({
+            maxwidth=50,
+            ellipsis_char="..."
+          }) or nil,
         },
         snippet = {
           expand = function(args) luasnip.lsp_expand(args.body) end,
